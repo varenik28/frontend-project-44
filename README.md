@@ -12,3 +12,5 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=varenik28_frontend-project-44&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=varenik28_frontend-project-44)
 
 [![asciicast](https://asciinema.org/a/Y7DP5jmqEPPRQP4cRtNknd5Y7.svg)](https://asciinema.org/a/Y7DP5jmqEPPRQP4cRtNknd5Y7)
+
+[![asciicast](https://asciinema.org/a/KEEKc2kz3vXdPBLzo8d9FCNh6.svg)](https://asciinema.org/a/KEEKc2kz3vXdPBLzo8d9FCNh6)

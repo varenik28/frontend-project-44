@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-import { greeting } from '../src/greeting.js'
-import { hello } from '../src/cli.js'
-import { evenGame } from '../src/isEven.js'
+import { runBrainEven } from '../src/games/even.js'
 
-greeting()
-const name = hello()
-evenGame(name)
+runBrainEven()
