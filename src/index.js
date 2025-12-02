@@ -11,12 +11,11 @@ const runGame = (description, getGameData) => {
     console.log(`Question: ${question}`)
     const yourAnswer = readlineSync.question('Your answer: ')
 
-    switch (yourAnswer) {
-      case rightAnswer:
-        console.log('Correct!')
-        break
-      default:
-        return { result: false, message: `'${yourAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.` }
+    if (yourAnswer === rightAnswer) {
+      console.log('Correct!')
+    }
+    else {
+      return { result: false, message: `'${yourAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.` }
     }
   }
 
