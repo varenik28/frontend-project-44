@@ -5,12 +5,15 @@ import getResult from '../result.js'
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-const isEven = (num) => {
-  return num % 2 === 0 ? 'yes' : 'no'
+const getGameData = () => {
+  const question = getRandomIntInclusive()
+  const answer = question % 2 === 0 ? 'yes' : 'no'
+
+  return { question: question, answer: answer }
 }
 
 export const runBrainEven = () => {
   const name = sayHello()
-  const result = runGame(description, getRandomIntInclusive, isEven)
-  return getResult(result, name)
+  const result = runGame(description, getGameData)
+  getResult(result, name)
 }
