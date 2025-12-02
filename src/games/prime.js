@@ -11,14 +11,14 @@ const getGameData = () => {
   if (question === 2) {
     return { question: question, answer: 'yes' }
   }
-  else if (question < 2 || question % 2 === 0) {
+
+  if (question < 2 || question % 2 === 0) {
     return { question: question, answer: 'no' }
   }
-  else {
-    for (let i = Math.ceil(Math.sqrt(question)); i > 2; i -= 1) {
-      if (question % i === 0) {
-        return { question: question, answer: 'no' }
-      }
+
+  for (let i = Math.ceil(Math.sqrt(question)); i > 2; i -= 1) {
+    if (question % i === 0) {
+      return { question: question, answer: 'no' }
     }
   }
 
