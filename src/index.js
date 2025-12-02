@@ -1,12 +1,16 @@
 import readlineSync from 'readline-sync'
 
-const runGame = (description, getQuestion, getRightAnswer) => {
+const runGame = (description, getGameData) => {
   console.log(description)
+
   for (let i = 0; i < 3; i += 1) {
-    const question = getQuestion()
+    const game = getGameData()
+    const question = game.question
+    const rightAnswer = game.answer
+
     console.log(`Question: ${question}`)
     const yourAnswer = readlineSync.question('Your answer: ')
-    const rightAnswer = getRightAnswer(question)
+
     switch (yourAnswer) {
       case rightAnswer:
         console.log('Correct!')
