@@ -11,36 +11,31 @@ const getRandomMathSign = () => {
   return mathSigns[randomIndex]
 }
 
-const getExpression = () => {
+const getGameData = () => {
   const firstNum = getRandomIntInclusive()
   const secondNum = getRandomIntInclusive()
   const mathSign = getRandomMathSign()
-  switch (mathSign) {
-    case '+':
-      return `${firstNum} + ${secondNum}`
-    case '-':
-      return `${firstNum} - ${secondNum}`
-    case '*':
-      return `${firstNum} * ${secondNum}`
-  }
-}
 
-const getExpressionResult = (expression) => {
-  const [firstNumStr, mathSign, secondNumStr] = expression.split(' ')
-  const firstNum = Number(firstNumStr)
-  const secondNum = Number(secondNumStr)
+  const question = `${firstNum} ${mathSign} ${secondNum}`
+  let answer = ''
+
   switch (mathSign) {
     case '+':
-      return String(firstNum + secondNum)
+      answer = firstNum + secondNum
+      break
     case '-':
-      return String(firstNum - secondNum)
+      answer = firstNum - secondNum
+      break
     case '*':
-      return String(firstNum * secondNum)
+      answer = firstNum * secondNum
+      break
   }
+
+  return { question: question, answer: String(answer) }
 }
 
 export const runBrainCalc = () => {
   const name = sayHello()
-  const result = runGame(description, getExpression, getExpressionResult)
+  const result = runGame(description, getGameData)
   getResult(result, name)
 }
