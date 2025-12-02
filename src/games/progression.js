@@ -1,6 +1,6 @@
 import sayHello from '../cli.js'
 import runGame from '../index.js'
-import { getRandomIntInclusive } from './even.js'
+import { getRandomIntInclusive } from '../random-numbers.js'
 import getResult from '../result.js'
 
 const description = 'What number is missing in the progression?'
